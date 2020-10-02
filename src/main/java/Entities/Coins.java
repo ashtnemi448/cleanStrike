@@ -7,19 +7,29 @@ public class Coins
 	private int availableRedCoins;
 	private int availableBlackCoins;
 	
+	public Coins(int availableRedCoins, int availableBlackCoins) 
+	{
+		super();
+		this.availableRedCoins = availableRedCoins;
+		this.availableBlackCoins = availableBlackCoins;
+	}
+	
 	public void restoreToDefault()
 	{
 		availableRedCoins=1;
 		availableBlackCoins=9;
 	}
+	
 	public int getAvailableRedCoins() 
 	{
 		return availableRedCoins;
 	}
+	
 	public int getAvailableBlackCoins() 
 	{
 		return availableBlackCoins;
 	}
+	
 	public void setAvailableRedCoins(int availableRedCoins) 
 	{
 		this.availableRedCoins = availableRedCoins;
@@ -28,6 +38,7 @@ public class Coins
 	{
 		this.availableBlackCoins = availableBlackCoins;
 	}
+	
 	public void decrement(int decrementFactor,Color color) 
 	{
 		if(color == Color.RED) 
