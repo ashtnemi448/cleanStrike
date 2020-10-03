@@ -2,11 +2,13 @@ package Main;
 
 import java.io.IOException;
 import java.util.List;
+
 import Constant.StrikeType;
 import Entities.Coins;
 import Entities.Players;
+import Input.InputParser;
+import Input.RandomizedInput;
 import Playground.Playground;
-import Statistics.GameStats;
 
 public class StartApplication 
 {
@@ -18,21 +20,27 @@ public class StartApplication
 		Players player2 = new Players(2);
 		Coins coins = new Coins(1, 9);
 
-		List<StrikeType> queryList = inputParser.parseInputTestCase("testcase.txt");
+		RandomizedInput randomizedInput = new RandomizedInput();
+		
+//		This generates a testcase file "randomInput.txt" inputParser root directory 
+		List<StrikeType> queryList = randomizedInput.generateRandomInputList(18);
+
+//		testcase.txt is a sample testcase file
+//		List<StrikeType> queryList = inputParser.parseInputTestCase("testcase.txt");
 
 		if (queryList == null)
 			System.out.println("File is empty");
 
 		Players winner = playground.playUtil(player1, player2, coins, queryList);
-
+		
+		System.out.println("##For Detailed Game Stats look into file \"gameStats.txt\"##");
 		if (winner == null) 
 		{
-			System.out.println("Its a draw");
+			System.out.println("\nVerdict:- \n\tIts a Tie");
 			return;
 		}
-		System.out.print("Winner is Player" + winner.getId());
+		System.out.print("\nVerdict:- \n\tWinner is Player" + winner.getId());
 		
-		System.out.println("\n## For Detailed Game Stats look into file \"gameStats.txt\" ##");
 		
 		return;
 	}
