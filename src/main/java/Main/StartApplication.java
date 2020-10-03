@@ -6,6 +6,7 @@ import java.util.List;
 import Constant.StrikeType;
 import Entities.Coins;
 import Entities.Players;
+import Exception.InputException;
 import Input.InputParser;
 import Input.RandomizedInput;
 import Playground.Playground;
@@ -27,10 +28,17 @@ public class StartApplication
 
 //		testcase.txt is a sample testcase file
 //		List<StrikeType> queryList = inputParser.parseInputTestCase("testcase.txt");
-
-		if (queryList == null)
-			System.out.println("File is empty");
-
+		
+		try 
+		{
+			if (queryList.size()==0)
+				throw new InputException("File is empty");
+		} catch (Exception e) 
+		{
+			System.out.println("Exception occured: "+e); 
+			return;
+		}
+		
 		Players winner = playground.playUtil(player1, player2, coins, queryList);
 		
 		System.out.println("##For Detailed Game Stats look into file \"gameStats.txt\"##");
