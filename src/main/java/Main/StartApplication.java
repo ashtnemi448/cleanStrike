@@ -2,7 +2,6 @@ package Main;
 
 import java.io.IOException;
 import java.util.List;
-
 import Constant.StrikeType;
 import Entities.Coins;
 import Entities.Players;
@@ -47,7 +46,7 @@ public class StartApplication
 			System.out.println("\nVerdict:- \n\tIts a Tie");
 			return;
 		}
-		System.out.print("\nVerdict:- \n\tWinner is Player" + winner.getId());
+		System.out.print("\nVerdict:- \n\tWinner is Player" + winner.getId()+" by {"+ player1.getPoints()+"} - {"+player2.getPoints()+"}");
 		
 		
 		return;
