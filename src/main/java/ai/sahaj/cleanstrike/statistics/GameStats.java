@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import ai.sahaj.cleanstrike.player.Player;
-import ai.sahaj.cleanstrike.carrom.StrikeType;
+import ai.sahaj.cleanstrike.carrom.StrikeTypes;
 import ai.sahaj.cleanstrike.carrom.Coins;
 
 
@@ -29,7 +29,7 @@ public class GameStats
 		fr.close();
 	}
 
-	public void saveStats(Player curPlayer, int turn, StrikeType strikeType) throws IOException 
+	public void saveStats(Player curPlayer, int turn, StrikeTypes strikeType) throws IOException 
 	{
 		FileWriter fr = new FileWriter(gameStatsFile, true);
 

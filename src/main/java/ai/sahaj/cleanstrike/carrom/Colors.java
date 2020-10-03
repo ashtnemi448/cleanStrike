@@ -1,6 +1,6 @@
 package ai.sahaj.cleanstrike.carrom;
 
-public enum Color 
+public enum Colors 
 {
 	RED,
 	BLACK;

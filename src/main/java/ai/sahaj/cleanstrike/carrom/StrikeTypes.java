@@ -1,6 +1,6 @@
 package ai.sahaj.cleanstrike.carrom;
 
-public enum StrikeType 
+public enum StrikeTypes 
 {
 	STRIKE,
 	MULTISTRIKE,

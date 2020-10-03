@@ -5,20 +5,20 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import ai.sahaj.cleanstrike.carrom.StrikeType;
+import ai.sahaj.cleanstrike.carrom.StrikeTypes;
 
 public class InputParser 
 {
 
-	public List<StrikeType> parseInputTestCase(String fileName) throws IOException
+	public List<StrikeTypes> parseInputTestCase(String fileName) throws IOException
 	{
-		List<StrikeType> queryList = new ArrayList<StrikeType>();
+		List<StrikeTypes> queryList = new ArrayList<StrikeTypes>();
 		BufferedReader br = new BufferedReader(new FileReader(fileName));
 	    String line;
 	    
 	    while ((line = br.readLine()) != null) 
 	    {
-	       StrikeType strikeType = StrikeType.valueOf(line);
+	       StrikeTypes strikeType = StrikeTypes.valueOf(line);
 	       queryList.add(strikeType);
 	    }
 	    

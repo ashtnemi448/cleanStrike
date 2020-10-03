@@ -1,10 +1,10 @@
 package ai.sahaj.cleanstrike.game;
 
-import ai.sahaj.cleanstrike.carrom.Color;
+import ai.sahaj.cleanstrike.carrom.Colors;
 import ai.sahaj.cleanstrike.carrom.Coins;
 import ai.sahaj.cleanstrike.player.Player;
 
-public class Ruleimplementation 
+public class StrikeAction 
 {
 	/*
 	 * When player pockets 1 coin Assumption - This coin is black coin
@@ -14,7 +14,7 @@ public class Ruleimplementation
 		if (coins.getAvailableBlackCoins() >= 1) 
 		{
 			player.incrementPoints(1);
-			coins.decrement(1, Color.BLACK);
+			coins.decrement(1, Colors.BLACK);
 		}
 		player.setConsecutiveLoseCountToZero();
 	}
@@ -32,7 +32,7 @@ public class Ruleimplementation
 			 * All, but 2 coins, that were pocketed, get back on to the carrom-board
 			 */
 			coins.restoreToDefault();
-			coins.decrement(2, Color.BLACK);
+			coins.decrement(2, Colors.BLACK);
 		}
 		player.setConsecutiveLoseCountToZero();
 	}
@@ -49,7 +49,7 @@ public class Ruleimplementation
 			 * If black coins are pocketed along with red coin in the same turn, black coins
 			 * get back on to the carrom-board
 			 */
-			coins.decrement(1, Color.RED);
+			coins.decrement(1, Colors.RED);
 		}
 		player.setConsecutiveLoseCountToZero();
 	}
@@ -75,7 +75,7 @@ public class Ruleimplementation
 		{
 			player.decrementPoints(2);
 			player.incrementFoulCount();
-			coins.decrement(1, Color.BLACK);
+			coins.decrement(1, Colors.BLACK);
 			int curConsecutiveLoseCount = player.getConsecutiveLoseCount();
 			player.setConsecutiveLoseCount(++curConsecutiveLoseCount);
 		}

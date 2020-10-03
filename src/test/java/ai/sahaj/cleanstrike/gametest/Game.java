@@ -1,11 +1,12 @@
 package ai.sahaj.cleanstrike.gametest;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import ai.sahaj.cleanstrike.carrom.Coins;
-import ai.sahaj.cleanstrike.game.Ruleimplementation;
+import ai.sahaj.cleanstrike.game.StrikeAction;
 import ai.sahaj.cleanstrike.player.Player;
 
 class Game {
@@ -22,21 +23,29 @@ class Game {
 		coins = new Coins(1, 9);
 	}
 	
-	@Test
-	public void StrikeMustResultInOnePointGain() 
+	@AfterEach
+	public void destroy()
 	{
-		Ruleimplementation ruleimplementation = new Ruleimplementation();
-		ruleimplementation.strike(player1, coins);
+		player1 =null;
+		player2 =null;
+		coins =null;
+	}
+	
+	@Test
+	public void strikeMustResultInOnePointGain() 
+	{
+		StrikeAction strikeAction = new StrikeAction();
+		strikeAction.strike(player1, coins);
 
 		assertEquals(1, player1.getPoints());
 		assertEquals(8, coins.getAvailableBlackCoins());
 	}
 	
 	@Test
-	public void  redStrikeTest() 
+	public void  redStrikeMustResultInOnePointGain() 
 	{
-		Ruleimplementation ruleimplementation = new Ruleimplementation();
-		ruleimplementation.redStrike(player1, coins);
+		StrikeAction strikeAction = new StrikeAction();
+		strikeAction.redStrike(player1, coins);
 
 		assertEquals(3, player1.getPoints());
 		assertEquals(9, coins.getAvailableBlackCoins());

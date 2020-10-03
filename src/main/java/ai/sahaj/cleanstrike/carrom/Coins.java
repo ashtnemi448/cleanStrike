@@ -37,9 +37,9 @@ public class Coins
 		this.availableBlackCoins = availableBlackCoins;
 	}
 	
-	public void decrement(int decrementFactor,Color color) 
+	public void decrement(int decrementFactor,Colors color) 
 	{
-		if(color == Color.RED) 
+		if(color == Colors.RED) 
 		{
 			if(availableRedCoins>0)
 				availableRedCoins -=  decrementFactor;

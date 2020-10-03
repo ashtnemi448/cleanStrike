@@ -1,10 +1,10 @@
 package ai.sahaj.cleanstrike.game;
 
-import ai.sahaj.cleanstrike.carrom.StrikeType;
+import ai.sahaj.cleanstrike.carrom.StrikeTypes;
 import ai.sahaj.cleanstrike.carrom.Coins;
 import ai.sahaj.cleanstrike.player.Player;
 
-public class PlayGroudUtil 
+public class GameUtilities 
 {
 	int turn = 0;
 
@@ -23,30 +23,30 @@ public class PlayGroudUtil
 		return curPlayer;
 	}
 	
-	void performStrikeAction(Player player, StrikeType strikeType, Coins coins) 
+	void performStrikeAction(Player player, StrikeTypes strikeType, Coins coins) 
 	{
-		Ruleimplementation ruleimplementation = new Ruleimplementation();
+		StrikeAction strikeAction = new StrikeAction();
 		
 		switch (strikeType) 
 		{
 			case STRIKE:
-				ruleimplementation.strike(player, coins);
+				strikeAction.strike(player, coins);
 				break;
 	
 			case MULTISTRIKE:
-				ruleimplementation.multiStrike(player, coins);
+				strikeAction.multiStrike(player, coins);
 				break;
 	
 			case REDSTRIKE:
-				ruleimplementation.redStrike(player, coins);
+				strikeAction.redStrike(player, coins);
 				break;
 	
 			case STRICKERSTRICK:
-				ruleimplementation.strikerStrick(player);
+				strikeAction.strikerStrick(player);
 				break;
 	
 			case DEFUNCTCOIN:
-				ruleimplementation.defunctCoin(player, coins);
+				strikeAction.defunctCoin(player, coins);
 				break;
 		}
 		return;
