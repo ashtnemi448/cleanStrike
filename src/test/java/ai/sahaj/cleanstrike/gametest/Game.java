@@ -1,9 +1,11 @@
-package ai.sahaj.cleanstrike.game;
+package ai.sahaj.cleanstrike.gametest;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.game.Ruleimplementation;
 import ai.sahaj.cleanstrike.player.Player;
 
 class Game {
@@ -21,7 +23,7 @@ class Game {
 	}
 	
 	@Test
-	public void  strikeTest() 
+	public void StrikeMustResultInOnePointGain() 
 	{
 		Ruleimplementation ruleimplementation = new Ruleimplementation();
 		ruleimplementation.strike(player1, coins);

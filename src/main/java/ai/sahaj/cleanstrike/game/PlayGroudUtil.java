@@ -1,7 +1,7 @@
 package ai.sahaj.cleanstrike.game;
 
-import ai.sahaj.cleanstrike.carrom.Coins;
 import ai.sahaj.cleanstrike.carrom.StrikeType;
+import ai.sahaj.cleanstrike.carrom.Coins;
 import ai.sahaj.cleanstrike.player.Player;
 
 public class PlayGroudUtil 

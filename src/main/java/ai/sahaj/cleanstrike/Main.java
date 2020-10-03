@@ -6,8 +6,8 @@ import ai.sahaj.cleanstrike.exception.InputException;
 import ai.sahaj.cleanstrike.game.Playground;
 import ai.sahaj.cleanstrike.input.InputParser;
 import ai.sahaj.cleanstrike.input.RandomizedInput;
-import ai.sahaj.cleanstrike.carrom.Coins;
 import ai.sahaj.cleanstrike.carrom.StrikeType;
+import ai.sahaj.cleanstrike.carrom.Coins;
 import ai.sahaj.cleanstrike.player.Player;
 
 public class Main 
