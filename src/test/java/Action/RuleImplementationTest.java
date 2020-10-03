@@ -1,8 +1,6 @@
 package Action;
 
 import static org.junit.Assert.*;
-
-import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -42,7 +40,6 @@ public class RuleImplementationTest {
 
 		assertEquals(3, player1.getPoints());
 		assertEquals(9, coins.getAvailableBlackCoins());
-		assertEquals(1, coins.getAvailableRedCoins());
+		assertEquals(0, coins.getAvailableRedCoins());
 	}
-
 }
