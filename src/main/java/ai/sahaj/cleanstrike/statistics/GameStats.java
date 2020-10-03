@@ -1,23 +1,22 @@
-package Statistics;
+package ai.sahaj.cleanstrike.statistics;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import ai.sahaj.cleanstrike.player.Player;
+import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.carrom.StrikeType;
 
-import Constant.StrikeType;
-import Entities.Coins;
-import Entities.Players;
 
 public class GameStats 
 {
 
 	File gameStatsFile;
-	Players player1;
-	Players player2;
+	Player player1;
+	Player player2;
 	Coins coins;
 
-	public GameStats(Players player1, Players player2,Coins coins) throws IOException 
+	public GameStats(Player player1, Player player2,Coins coins) throws IOException 
 	{
 		super();
 		this.player1 = player1;
@@ -30,7 +29,7 @@ public class GameStats
 		fr.close();
 	}
 
-	public void saveStats(Players curPlayer, int turn, StrikeType strikeType) throws IOException 
+	public void saveStats(Player curPlayer, int turn, StrikeType strikeType) throws IOException 
 	{
 		FileWriter fr = new FileWriter(gameStatsFile, true);
 

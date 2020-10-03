@@ -1,10 +1,9 @@
-package Checker;
+package ai.sahaj.cleanstrike.game;
 
-import Entities.Players;
-
+import ai.sahaj.cleanstrike.player.Player;
 public class Checker 
 {
-	static public boolean checkFor3ConsecutiveLoses(Players player) 
+	static public boolean checkFor3ConsecutiveLoses(Player player) 
 	{
 		if (player.getConsecutiveLoseCount() == 3) 
 		{
@@ -14,7 +13,7 @@ public class Checker
 		return false;
 	}
 
-	static public boolean checkFor3Fouls(Players player) 
+	static public boolean checkFor3Fouls(Player player) 
 	{
 		if (player.getFoul() == 3) 
 		{

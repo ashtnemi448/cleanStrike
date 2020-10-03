@@ -1,15 +1,12 @@
-package Input;
+package ai.sahaj.cleanstrike.input;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.FileNameMap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-
-import Constant.StrikeType;
+import ai.sahaj.cleanstrike.carrom.StrikeType;
 
 public class RandomizedInput
 {

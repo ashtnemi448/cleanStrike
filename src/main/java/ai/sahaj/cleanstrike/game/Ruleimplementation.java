@@ -1,15 +1,15 @@
-package Action;
+package ai.sahaj.cleanstrike.game;
 
-import Constant.Color;
-import Entities.Coins;
-import Entities.Players;
+import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.carrom.Color;
+import ai.sahaj.cleanstrike.player.Player;
 
 public class Ruleimplementation 
 {
 	/*
 	 * When player pockets 1 coin Assumption - This coin is black coin
 	 */
-	public void strike(Players player, Coins coins) 
+	public void strike(Player player, Coins coins) 
 	{
 		if (coins.getAvailableBlackCoins() >= 1) 
 		{
@@ -23,7 +23,7 @@ public class Ruleimplementation
 	 * When player pockets more than 1 coin Assumption - pocketed coins are only
 	 * black coins
 	 */
-	public void multiStrike(Players player, Coins coins) 
+	public void multiStrike(Player player, Coins coins) 
 	{
 		if (coins.getAvailableBlackCoins() >= 2) 
 		{
@@ -40,7 +40,7 @@ public class Ruleimplementation
 	/*
 	 * When player pockets a red coin and 0 or more black coins
 	 */
-	public void redStrike(Players player, Coins coins) 
+	public void redStrike(Player player, Coins coins) 
 	{
 		if (coins.getAvailableRedCoins() > 0) 
 		{
@@ -57,7 +57,7 @@ public class Ruleimplementation
 	/*
 	 * When player pockets stricker
 	 */
-	public void strikerStrick(Players player) 
+	public void strikerStrick(Player player) 
 	{
 		player.decrementPoints(1);
 		player.incrementFoulCount();
@@ -69,7 +69,7 @@ public class Ruleimplementation
 	 * When coin is thrown out of the board Assumption - thrown out coin is Black
 	 * coin
 	 */
-	public void defunctCoin(Players player, Coins coins) 
+	public void defunctCoin(Player player, Coins coins) 
 	{
 		if (coins.getAvailableRedCoins() > 0 || coins.getAvailableBlackCoins() > 0)
 		{

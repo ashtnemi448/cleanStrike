@@ -1,11 +1,9 @@
-package Entities;
-
-import Constant.Color;
+package ai.sahaj.cleanstrike.carrom;
 
 public class Coins 
 {
-	private int availableRedCoins;
-	private int availableBlackCoins;
+	public int availableRedCoins;
+	public int availableBlackCoins;
 	
 	public Coins(int availableRedCoins, int availableBlackCoins) 
 	{
@@ -52,3 +50,4 @@ public class Coins
 		return;
 	}
 }
+

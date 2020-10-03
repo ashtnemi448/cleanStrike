@@ -1,24 +1,22 @@
-package Action;
+package ai.sahaj.cleanstrike.game;
 
-import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import Entities.Coins;
-import Entities.Players;
+import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.player.Player;
 
+class Game {
 
-public class RuleImplementationTest {
-
-	Players player1; 
-	Players player2; 
-	Coins coins; 
+	Player player1; 
+	Player player2; 
+	Coins coins;
 	
 	@BeforeEach
 	public void init()
 	{
-		player1 = new Players(1);
-		player2 = new Players(2);
+		player1 = new Player(1);
+		player2 = new Player(2);
 		coins = new Coins(1, 9);
 	}
 	

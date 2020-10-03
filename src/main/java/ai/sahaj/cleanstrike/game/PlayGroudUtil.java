@@ -1,17 +1,16 @@
-package Playground;
+package ai.sahaj.cleanstrike.game;
 
-import Action.Ruleimplementation;
-import Constant.StrikeType;
-import Entities.Coins;
-import Entities.Players;
+import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.carrom.StrikeType;
+import ai.sahaj.cleanstrike.player.Player;
 
 public class PlayGroudUtil 
 {
 	int turn = 0;
 
-	Players getCurPlayer(Players player1, Players player2)
+	Player getCurPlayer(Player player1, Player player2)
 	{
-		Players curPlayer;
+		Player curPlayer;
 		if (turn % 2 == 0) 
 		{
 			curPlayer = player1;
@@ -24,7 +23,7 @@ public class PlayGroudUtil
 		return curPlayer;
 	}
 	
-	void performStrikeAction(Players player, StrikeType strikeType, Coins coins) 
+	void performStrikeAction(Player player, StrikeType strikeType, Coins coins) 
 	{
 		Ruleimplementation ruleimplementation = new Ruleimplementation();
 		
@@ -52,7 +51,4 @@ public class PlayGroudUtil
 		}
 		return;
 	}
-	
-	
-
 }

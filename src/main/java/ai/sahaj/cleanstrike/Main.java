@@ -1,23 +1,23 @@
-package Main;
+package ai.sahaj.cleanstrike;
 
 import java.io.IOException;
 import java.util.List;
-import Constant.StrikeType;
-import Entities.Coins;
-import Entities.Players;
-import Exception.InputException;
-import Input.InputParser;
-import Input.RandomizedInput;
-import Playground.Playground;
+import ai.sahaj.cleanstrike.exception.InputException;
+import ai.sahaj.cleanstrike.game.Playground;
+import ai.sahaj.cleanstrike.input.InputParser;
+import ai.sahaj.cleanstrike.input.RandomizedInput;
+import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.carrom.StrikeType;
+import ai.sahaj.cleanstrike.player.Player;
 
-public class StartApplication 
+public class Main 
 {
 	public static void main(String... args) throws IOException 
 	{
 		InputParser inputParser = new InputParser();
 		Playground playground = new Playground();
-		Players player1 = new Players(1);
-		Players player2 = new Players(2);
+		Player player1 = new Player(1);
+		Player player2 = new Player(2);
 		Coins coins = new Coins(1, 9);
 
 		RandomizedInput randomizedInput = new RandomizedInput();
@@ -38,7 +38,7 @@ public class StartApplication
 			return;
 		}
 		
-		Players winner = playground.playUtil(player1, player2, coins, queryList);
+		Player winner = playground.playUtil(player1, player2, coins, queryList);
 		
 		System.out.println("##For Detailed Game Stats look into file \"gameStats.txt\"##");
 		if (winner == null) 

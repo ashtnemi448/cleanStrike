@@ -1,13 +1,13 @@
-package Entities;
+package ai.sahaj.cleanstrike.player;
 
-public class Players 
+public class Player 
 {
 	private int id;
 	private int points;
 	private int foul;
 	private int consecutiveLoseCount;
 	
-	public Players(int id) 
+	public Player(int id) 
 	{
 		this.id = id;
 		points=0;
