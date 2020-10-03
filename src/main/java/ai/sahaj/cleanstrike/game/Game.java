@@ -9,6 +9,22 @@ import ai.sahaj.cleanstrike.statistics.GameStats;
 
 public class Game implements GameRules 
 {
+	@Override
+	public Player ruleToChooseWinner(Player player1, Player player2)
+	{
+		return GameRulesImplementation.chooseWinner(player1,player2);
+	}
+
+	@Override
+	public boolean ruleForConsecutiveLoses(Player player) {
+		return GameRulesImplementation.checkFor3ConsecutiveLoses(player) ;
+	}
+
+	@Override
+	public boolean ruleForFouls(Player player) {
+		return GameRulesImplementation.checkFor3Fouls(player) ;
+	}
+	
 	public Player startGame(Player player1, Player player2, Coins coins, List<StrikeTypes> query) throws IOException 
 	{
 		GameUtilities gameUtilities = new GameUtilities();
@@ -33,21 +49,5 @@ public class Game implements GameRules
 		}
 		Player winner = ruleToChooseWinner(player1, player2);
 		return winner;
-	}
-	
-	@Override
-	public Player ruleToChooseWinner(Player player1, Player player2)
-	{
-		return GameRulesImplementation.chooseWinner(player1,player2);
-	}
-
-	@Override
-	public boolean ruleForConsecutiveLoses(Player player) {
-		return GameRulesImplementation.checkFor3ConsecutiveLoses(player) ;
-	}
-
-	@Override
-	public boolean ruleForFouls(Player player) {
-		return GameRulesImplementation.checkFor3Fouls(player) ;
 	}
 }
