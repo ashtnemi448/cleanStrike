@@ -10,7 +10,6 @@ import ai.sahaj.cleanstrike.exception.InputException;
 
 public class InputParser 
 {
-
 	public List<StrikeTypes> parseInputTestCase(String fileName) throws IOException
 	{
 		

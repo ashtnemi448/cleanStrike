@@ -34,8 +34,7 @@ class GameTest
 		{
 			exception = e;
 		}
-		System.out.println(exception);
-		assertTrue(exception instanceof InputException);
+		assertNull(exception);
 	}
 	
 	

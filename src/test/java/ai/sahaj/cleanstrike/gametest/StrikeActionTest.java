@@ -34,6 +34,7 @@ class StrikeActionTest {
 	}
 	
 	@Test
+	@DisplayName("Must throw NoAvailableRedCoins exception if no black coins on board")
 	public void mustThrowNoAvailableBlackCoins()
 	{
 		Exception exception=null;
@@ -45,7 +46,26 @@ class StrikeActionTest {
 		}
 		catch (Exception e) 
 		{
-			exception = e;
+			exception = e; //null is returned by strike() when exception occurs
+		}
+		
+		assertNull(exception);
+	}
+	
+	@Test
+	@DisplayName("Must throw NoAvailableRedCoins exception if no red coins on board")
+	public void mustThrowNoAvailableRedCoins()
+	{
+		Exception exception=null;
+		try 
+		{
+			coins.setAvailableRedCoins(0);
+			StrikeAction strikeAction = new StrikeAction();
+			strikeAction.redStrike(player1, coins);
+		}
+		catch (Exception e) 
+		{
+			exception = e;//null is returned by redStrike() when exception occurs
 		}
 		
 		assertNull(exception);

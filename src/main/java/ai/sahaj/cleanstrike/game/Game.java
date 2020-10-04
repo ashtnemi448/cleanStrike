@@ -14,11 +14,13 @@ public class Game implements GameRules
 		return GameRulesImplementation.chooseWinner(player1,player2);
 	}
 
-	public void ruleForConsecutiveLoses(Player player) {
+	public void ruleForConsecutiveLoses(Player player) 
+	{
 		 GameRulesImplementation.checkFor3ConsecutiveLoses(player) ;
 	}
 
-	public void ruleForFouls(Player player) {
+	public void ruleForFouls(Player player) 
+	{
 		 GameRulesImplementation.checkFor3Fouls(player) ;
 	}
 	
@@ -33,8 +35,6 @@ public class Game implements GameRules
 			StrikeTypes strikeType = query.get(i);
 
 			ruleForConsecutiveLoses(curPlayer);
-			
-
 			ruleForFouls(curPlayer);
 		
 			gameUtilities.performStrikeAction(curPlayer, strikeType, coins);

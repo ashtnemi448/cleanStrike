@@ -3,6 +3,7 @@ package ai.sahaj.cleanstrike.carromtest;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import ai.sahaj.cleanstrike.carrom.Coins;
@@ -20,6 +21,7 @@ class CoinTest {
 	}
 	
 	@Test
+	@DisplayName("Black coin count must decrease by one")
 	void mustDecrementBlackCoin()
 	{
 		coins.decrement(1,Colors.BLACK);
@@ -27,6 +29,7 @@ class CoinTest {
 	}
 	
 	@Test
+	@DisplayName("Red coin count must decrease by one")
 	void mustDecrementRedCoin()
 	{
 		coins.decrement(1,Colors.RED);

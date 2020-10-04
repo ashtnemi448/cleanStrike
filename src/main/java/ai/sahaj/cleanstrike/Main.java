@@ -26,19 +26,23 @@ public class Main
 		List<StrikeTypes> queryList = randomizedInput.generateRandomInputList(18);
 
 //		testcase.txt is a sample testcase file
-//		List<StrikeType> queryList = inputParser.parseInputTestCase("testcase.txt");
+//		List<StrikeTypes> queryList = inputParser.parseInputTestCase("SampleTestcase.txt");
 		
 		Player winner = game.startGame(player1, player2, coins, queryList);
-		
 		System.out.println("##For Detailed Game Stats look into file \"gameStats.txt\"##");
+		System.out.println("\n\nPlayer1 score : "+ player1.getPoints());
+		System.out.println("Player1 score : "+ player2.getPoints());
+		
 		if (winner == null) 
 		{
-			System.out.println("\nVerdict:- \n\tIts a Tie");
+			
+			if(player1.getPoints()!=player2.getPoints())
+				System.out.println("\nVerdict:- \n\tIts a Tie <According to given rules though points are not same its a tie>");
+			else 
+				System.out.println("\nVerdict:- \n\tIts a Tie");
 			return;
 		}
-		System.out.print("\nVerdict:- \n\tWinner is Player" + winner.getId()+" by {"+ player1.getPoints()+"} - {"+player2.getPoints()+"}");
-		
-		
+		System.out.print("\nVerdict:-\n\tWinner is Player" + winner.getId());
 		return;
 	}
 }
