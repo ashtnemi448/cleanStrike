@@ -2,6 +2,12 @@ package ai.sahaj.cleanstrike.player;
 
 public class Player 
 {
+	@Override
+	public String toString() {
+		return "Player [id=" + id + ", points=" + points + ", foul=" + foul + ", consecutiveLoseCount="
+				+ consecutiveLoseCount + "]";
+	}
+
 	private int id;
 	private int points;
 	private int foul;

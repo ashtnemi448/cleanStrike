@@ -4,7 +4,7 @@ import ai.sahaj.cleanstrike.player.Player;
 
 public interface GameRules
 {
-	Player ruleToChooseWinner(Player player1, Player player2);
-	void ruleForConsecutiveLoses(Player player);
-	void ruleForFouls(Player player);
+	public Player ruleToChooseWinner(Player player1, Player player2);
+	public void ruleForConsecutiveLoses(Player player);
+	public void ruleForFouls(Player player);
 }

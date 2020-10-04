@@ -2,22 +2,24 @@ package ai.sahaj.cleanstrike.game;
 
 import ai.sahaj.cleanstrike.player.Player;
 
-public class GameRulesImplementation 
+public class GameRulesImplementation implements GameRules
 {
-	static public Player chooseWinner(Player player1, Player player2)
+	@Override
+	public Player ruleToChooseWinner(Player player1, Player player2) 
 	{
 		if (player1.getPoints() > player2.getPoints()
 				&& (player1.getPoints() >= 5 && player1.getPoints() - player2.getPoints() >= 3))
 			return player1;
-
+	
 		if (player2.getPoints() > player1.getPoints()
 				&& (player2.getPoints() >= 5 && player2.getPoints() - player1.getPoints() >= 3))
 			return player2;
-
+	
 		return null;
 	}
-	
-	static public void checkFor3ConsecutiveLoses(Player player) 
+
+	@Override
+	public void ruleForConsecutiveLoses(Player player)
 	{
 		if (player.getConsecutiveLoseCount() == 3) 
 		{
@@ -25,10 +27,10 @@ public class GameRulesImplementation
 			player.setConsecutiveLoseCountToZero();
 			
 		}
-		
 	}
 
-	static public void checkFor3Fouls(Player player) 
+	@Override
+	public void ruleForFouls(Player player) 
 	{
 		if (player.getFoul() == 3) 
 		{
@@ -36,6 +38,5 @@ public class GameRulesImplementation
 			player.setFoulCountToZero();
 			
 		}
-		
 	}
 }

@@ -1,13 +1,12 @@
 package ai.sahaj.cleanstrike.carrom;
 
-public class Coins 
+public class Carrom 
 {
 	public int availableRedCoins;
 	public int availableBlackCoins;
 	
-	public Coins(int availableRedCoins, int availableBlackCoins) 
+	public Carrom(int availableRedCoins, int availableBlackCoins) 
 	{
-		super();
 		this.availableRedCoins = availableRedCoins;
 		this.availableBlackCoins = availableBlackCoins;
 	}
@@ -52,7 +51,7 @@ public class Coins
 
 	@Override
 	public String toString() {
-		return "Coins [availableRedCoins=" + availableRedCoins + ", availableBlackCoins=" + availableBlackCoins + "]";
+		return "Carrom [availableRedCoins=" + availableRedCoins + ", availableBlackCoins=" + availableBlackCoins + "]";
 	}
 }
 

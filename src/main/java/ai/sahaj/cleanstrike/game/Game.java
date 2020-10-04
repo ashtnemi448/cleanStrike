@@ -3,44 +3,28 @@ package ai.sahaj.cleanstrike.game;
 import java.io.IOException;
 import java.util.List;
 import ai.sahaj.cleanstrike.carrom.StrikeTypes;
-import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.carrom.Carrom;
 import ai.sahaj.cleanstrike.player.Player;
 import ai.sahaj.cleanstrike.statistics.GameStats;
 
-public class Game implements GameRules 
+public class Game
 {
-	public Player ruleToChooseWinner(Player player1, Player player2)
-	{
-		return GameRulesImplementation.chooseWinner(player1,player2);
-	}
-
-	public void ruleForConsecutiveLoses(Player player) 
-	{
-		 GameRulesImplementation.checkFor3ConsecutiveLoses(player) ;
-	}
-
-	public void ruleForFouls(Player player) 
-	{
-		 GameRulesImplementation.checkFor3Fouls(player) ;
-	}
-	
-	public Player startGame(Player player1, Player player2, Coins coins, List<StrikeTypes> query) throws IOException 
+	public void startGame(Player player1, Player player2, Carrom Carrom, List<StrikeTypes> query) throws IOException 
 	{
 		GameUtilities gameUtilities = new GameUtilities();
-		GameStats gameStats = new GameStats(player1, player2,coins);
+		GameStats gameStats = new GameStats(player1, player2,Carrom);
+		GameRulesImplementation gameRulesImplementation =new GameRulesImplementation();
 		
 		for (int i = 0; i < query.size(); i++)
 		{
-			Player curPlayer = gameUtilities.getCurPlayer(player1, player2);
+			Player currentPlayer = gameUtilities.getCurPlayer(player1, player2);
 			StrikeTypes strikeType = query.get(i);
 
-			ruleForConsecutiveLoses(curPlayer);
-			ruleForFouls(curPlayer);
+			gameRulesImplementation.ruleForConsecutiveLoses(currentPlayer);
+			gameRulesImplementation.ruleForFouls(currentPlayer);
 		
-			gameUtilities.performStrikeAction(curPlayer, strikeType, coins);
-			gameStats.saveStats(curPlayer, gameUtilities.turn,strikeType);
+			gameUtilities.performStrikeAction(currentPlayer, strikeType, Carrom);
+			gameStats.saveStats(currentPlayer, gameUtilities.turn,strikeType);
 		}
-		Player winner = ruleToChooseWinner(player1, player2);
-		return winner;
 	}
 }

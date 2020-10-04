@@ -5,16 +5,16 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ai.sahaj.cleanstrike.game.Game;
 import ai.sahaj.cleanstrike.game.StrikeAction;
+import ai.sahaj.cleanstrike.game.GameRulesImplementation;
 import ai.sahaj.cleanstrike.input.InputParser;
-import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.carrom.Carrom;
 import ai.sahaj.cleanstrike.carrom.StrikeTypes;
 import ai.sahaj.cleanstrike.exception.InputException;
-import ai.sahaj.cleanstrike.exception.NoAvailableBlackCoins;
+import ai.sahaj.cleanstrike.exception.NoAvailableBlackCoinsException;
 import ai.sahaj.cleanstrike.player.Player;
 
 class GameTest 
@@ -22,7 +22,7 @@ class GameTest
 	
 	@Test
 	@DisplayName("This scenario throws file Exception")
-	public void mustThrowNoAvailableBlackCoins()
+	public void mustThrowInputException()
 	{
 		InputParser inputParser = new InputParser();
 		Exception exception=null;
@@ -52,10 +52,13 @@ class GameTest
 		
 		Player player1 = new Player(1);
 		Player player2 = new Player(2);
-		Coins coins = new Coins(1, 9);
+		Carrom Carrom = new Carrom(1, 9);
 		
+		GameRulesImplementation gameRuleImplementation = new GameRulesImplementation();
 		Game game = new Game();
-		assertNull(game.startGame(player1, player2, coins, queryList));
+		game.startGame(player1, player2, Carrom, queryList);
+		
+		assertNull(gameRuleImplementation.ruleToChooseWinner(player1, player2));
 	}
 	
 	@Test
@@ -77,10 +80,13 @@ class GameTest
 		
 		Player player1 = new Player(1);
 		Player player2 = new Player(2);
-		Coins coins = new Coins(1, 9);
+		Carrom Carrom = new Carrom(1, 9);
 		
+		GameRulesImplementation gameRuleImplementation = new GameRulesImplementation();
 		Game game = new Game();
-		assertEquals(player1,game.startGame(player1, player2, coins, queryList));
+		game.startGame(player1, player2, Carrom, queryList);
+		
+		assertEquals(player1,gameRuleImplementation.ruleToChooseWinner(player1, player2));
 	}
 	
 	@Test
@@ -102,10 +108,13 @@ class GameTest
 		
 		Player player1 = new Player(1);
 		Player player2 = new Player(2);
-		Coins coins = new Coins(1, 9);
+		Carrom Carrom = new Carrom(1, 9);
 		
+		GameRulesImplementation gameRuleImplementation = new GameRulesImplementation();
 		Game game = new Game();
-		assertEquals(player2,game.startGame(player1, player2, coins, queryList));
+		game.startGame(player1, player2, Carrom, queryList);
+		
+		assertEquals(player2,gameRuleImplementation.ruleToChooseWinner(player1, player2));
 	}
 }
 

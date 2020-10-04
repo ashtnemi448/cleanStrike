@@ -30,7 +30,7 @@ public class InputParser
 		} 
 		catch (Exception e) 
 		{
-			System.out.println("Exception occured: "+e); 
+			//System.out.println("Exception occured: "+e); 
 			return null;
 		}
 		

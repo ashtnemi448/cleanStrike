@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import ai.sahaj.cleanstrike.player.Player;
 import ai.sahaj.cleanstrike.carrom.StrikeTypes;
-import ai.sahaj.cleanstrike.carrom.Coins;
+import ai.sahaj.cleanstrike.carrom.Carrom;
 
 
 public class GameStats 
@@ -14,15 +14,15 @@ public class GameStats
 	File gameStatsFile;
 	Player player1;
 	Player player2;
-	Coins coins;
+	Carrom Carrom;
 	public static String commentString=null;
 
-	public GameStats(Player player1, Player player2,Coins coins) throws IOException 
+	public GameStats(Player player1, Player player2,Carrom Carrom) throws IOException 
 	{
 		super();
 		this.player1 = player1;
 		this.player2 = player2;
-		this.coins = coins;
+		this.Carrom = Carrom;
 
 		gameStatsFile = new File("gameStats.txt");
 		FileWriter fr = new FileWriter(gameStatsFile, false);
@@ -50,11 +50,11 @@ public class GameStats
 		fr.write("\nStrike Type - ");
 		fr.write(String.valueOf(strikeType));
 		
-		fr.write("\nRemaining Black Coins - ");
-		fr.write(String.valueOf(coins.getAvailableBlackCoins()));
+		fr.write("\nRemaining Black Carrom - ");
+		fr.write(String.valueOf(Carrom.getAvailableBlackCoins()));
 		
-		fr.write("\nRemaining Red Coins - ");
-		fr.write(String.valueOf(coins.getAvailableRedCoins()));
+		fr.write("\nRemaining Red Carrom - ");
+		fr.write(String.valueOf(Carrom.getAvailableRedCoins()));
 
 		fr.write("\nPlayer 1 - ");
 		fr.write("\n\tPoints -> ");
