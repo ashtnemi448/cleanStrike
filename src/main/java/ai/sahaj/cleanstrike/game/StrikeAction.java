@@ -1,8 +1,13 @@
 package ai.sahaj.cleanstrike.game;
 
 import ai.sahaj.cleanstrike.carrom.Colors;
+import ai.sahaj.cleanstrike.exception.InputException;
+import ai.sahaj.cleanstrike.exception.NoAvailableBlackCoins;
+import ai.sahaj.cleanstrike.exception.NoAvailableRedCoins;
+import ai.sahaj.cleanstrike.exception.NoCoinsOnBoard;
 import ai.sahaj.cleanstrike.carrom.Coins;
 import ai.sahaj.cleanstrike.player.Player;
+import ai.sahaj.cleanstrike.statistics.GameStats;
 
 public class StrikeAction 
 {
@@ -15,6 +20,17 @@ public class StrikeAction
 		{
 			player.incrementPoints(1);
 			coins.decrement(1, Colors.BLACK);
+		}
+		else
+		{
+			try
+			{
+				throw new NoAvailableBlackCoins("Chance wasted as sufficient black coins are not available");
+			} 
+			catch (Exception e) 
+			{
+				GameStats.commentString = e.getLocalizedMessage();
+			}
 		}
 		player.setConsecutiveLoseCountToZero();
 	}
@@ -34,6 +50,17 @@ public class StrikeAction
 			coins.restoreToDefault();
 			coins.decrement(2, Colors.BLACK);
 		}
+		else
+		{
+			try
+			{
+				throw new NoAvailableBlackCoins("Chance wasted as sufficient black coins are not available");
+			} 
+			catch (Exception e) 
+			{
+				GameStats.commentString = e.getLocalizedMessage();
+			}
+		}
 		player.setConsecutiveLoseCountToZero();
 	}
 
@@ -50,6 +77,17 @@ public class StrikeAction
 			 * get back on to the carrom-board
 			 */
 			coins.decrement(1, Colors.RED);
+		}
+		else
+		{
+			try
+			{
+				throw new NoAvailableRedCoins("Chance wasted as sufficient red coins are not available");
+			} 
+			catch (Exception e) 
+			{
+				GameStats.commentString = e.getLocalizedMessage();
+			}
 		}
 		player.setConsecutiveLoseCountToZero();
 	}
@@ -71,13 +109,24 @@ public class StrikeAction
 	 */
 	public void defunctCoin(Player player, Coins coins) 
 	{
-		if (coins.getAvailableRedCoins() > 0 || coins.getAvailableBlackCoins() > 0)
+		if ( coins.getAvailableBlackCoins() > 0)
 		{
 			player.decrementPoints(2);
 			player.incrementFoulCount();
 			coins.decrement(1, Colors.BLACK);
 			int curConsecutiveLoseCount = player.getConsecutiveLoseCount();
 			player.setConsecutiveLoseCount(++curConsecutiveLoseCount);
+		}
+		else
+		{
+			try
+			{
+				throw new NoCoinsOnBoard("Chance wasted as sufficient black coins are not available");
+			} 
+			catch (Exception e) 
+			{
+				GameStats.commentString = e.getLocalizedMessage();
+			}
 		}
 	}
 }

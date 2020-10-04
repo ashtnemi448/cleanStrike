@@ -15,6 +15,7 @@ public class GameStats
 	Player player1;
 	Player player2;
 	Coins coins;
+	public static String commentString=null;
 
 	public GameStats(Player player1, Player player2,Coins coins) throws IOException 
 	{
@@ -35,7 +36,14 @@ public class GameStats
 
 		fr.write("\n\nturnNumber - ");
 		fr.write(String.valueOf(turn));
-
+		
+		if(commentString!=null)
+		{
+			fr.write("\nComment - ");
+			fr.write(commentString);
+			commentString=null;
+		}
+		
 		fr.write("\nCurrent player - Player");
 		fr.write(String.valueOf(curPlayer.getId()));
 		

@@ -2,13 +2,13 @@ Game Stats for clean Strike
 
 turnNumber - 1
 Current player - Player1
-Strike Type - REDSTRIKE
-Remaining Black Coins - 9
-Remaining Red Coins - 0
+Strike Type - DEFUNCTCOIN
+Remaining Black Coins - 8
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 0
+	Points -> -2
+	ConsecutiveLose - 1
+	Fouls - 1
 Player 2 - 
 	Points -> 0
 	ConsecutiveLose - 0
@@ -16,238 +16,242 @@ Player 2 -
 
 turnNumber - 2
 Current player - Player2
-Strike Type - REDSTRIKE
-Remaining Black Coins - 9
-Remaining Red Coins - 0
+Strike Type - STRIKE
+Remaining Black Coins - 7
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 0
+	Points -> -2
+	ConsecutiveLose - 1
+	Fouls - 1
 Player 2 - 
-	Points -> 0
+	Points -> 1
 	ConsecutiveLose - 0
 	Fouls - 0
 
 turnNumber - 3
 Current player - Player1
-Strike Type - STRIKE
-Remaining Black Coins - 8
-Remaining Red Coins - 0
+Strike Type - MULTISTRIKE
+Remaining Black Coins - 7
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 4
-	ConsecutiveLose - 0
-	Fouls - 0
-Player 2 - 
 	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 1
+Player 2 - 
+	Points -> 1
 	ConsecutiveLose - 0
 	Fouls - 0
 
 turnNumber - 4
 Current player - Player2
-Strike Type - STRIKE
+Strike Type - MULTISTRIKE
 Remaining Black Coins - 7
-Remaining Red Coins - 0
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 4
+	Points -> 0
 	ConsecutiveLose - 0
-	Fouls - 0
+	Fouls - 1
 Player 2 - 
-	Points -> 1
+	Points -> 3
 	ConsecutiveLose - 0
 	Fouls - 0
 
 turnNumber - 5
 Current player - Player1
-Strike Type - REDSTRIKE
+Strike Type - STRICKERSTRICK
 Remaining Black Coins - 7
-Remaining Red Coins - 0
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 4
-	ConsecutiveLose - 0
-	Fouls - 0
+	Points -> -1
+	ConsecutiveLose - 1
+	Fouls - 2
 Player 2 - 
-	Points -> 1
+	Points -> 3
 	ConsecutiveLose - 0
 	Fouls - 0
 
 turnNumber - 6
 Current player - Player2
-Strike Type - STRIKE
-Remaining Black Coins - 6
-Remaining Red Coins - 0
+Strike Type - MULTISTRIKE
+Remaining Black Coins - 7
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 4
-	ConsecutiveLose - 0
-	Fouls - 0
+	Points -> -1
+	ConsecutiveLose - 1
+	Fouls - 2
 Player 2 - 
-	Points -> 2
+	Points -> 5
 	ConsecutiveLose - 0
 	Fouls - 0
 
 turnNumber - 7
 Current player - Player1
-Strike Type - STRICKERSTRICK
+Strike Type - STRIKE
 Remaining Black Coins - 6
-Remaining Red Coins - 0
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 3
-	ConsecutiveLose - 1
-	Fouls - 1
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 2
 Player 2 - 
-	Points -> 2
+	Points -> 5
 	ConsecutiveLose - 0
 	Fouls - 0
 
 turnNumber - 8
 Current player - Player2
-Strike Type - STRIKE
-Remaining Black Coins - 5
-Remaining Red Coins - 0
+Strike Type - STRICKERSTRICK
+Remaining Black Coins - 6
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 3
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 2
+Player 2 - 
+	Points -> 4
 	ConsecutiveLose - 1
 	Fouls - 1
-Player 2 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 0
 
 turnNumber - 9
 Current player - Player1
-Strike Type - REDSTRIKE
-Remaining Black Coins - 5
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 1
-Player 2 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 0
-
-turnNumber - 10
-Current player - Player2
-Strike Type - REDSTRIKE
-Remaining Black Coins - 5
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 1
-Player 2 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 0
-
-turnNumber - 11
-Current player - Player1
-Strike Type - STRICKERSTRICK
-Remaining Black Coins - 5
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 2
-	ConsecutiveLose - 1
-	Fouls - 2
-Player 2 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 0
-
-turnNumber - 12
-Current player - Player2
-Strike Type - STRICKERSTRICK
-Remaining Black Coins - 5
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 2
-	ConsecutiveLose - 1
-	Fouls - 2
-Player 2 - 
-	Points -> 2
-	ConsecutiveLose - 1
-	Fouls - 1
-
-turnNumber - 13
-Current player - Player1
-Strike Type - REDSTRIKE
-Remaining Black Coins - 5
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 2
-	ConsecutiveLose - 0
-	Fouls - 2
-Player 2 - 
-	Points -> 2
-	ConsecutiveLose - 1
-	Fouls - 1
-
-turnNumber - 14
-Current player - Player2
-Strike Type - REDSTRIKE
-Remaining Black Coins - 5
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 2
-	ConsecutiveLose - 0
-	Fouls - 2
-Player 2 - 
-	Points -> 2
-	ConsecutiveLose - 0
-	Fouls - 1
-
-turnNumber - 15
-Current player - Player1
-Strike Type - STRIKE
-Remaining Black Coins - 4
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 2
-Player 2 - 
-	Points -> 2
-	ConsecutiveLose - 0
-	Fouls - 1
-
-turnNumber - 16
-Current player - Player2
-Strike Type - STRIKE
-Remaining Black Coins - 3
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 2
-Player 2 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 1
-
-turnNumber - 17
-Current player - Player1
 Strike Type - DEFUNCTCOIN
-Remaining Black Coins - 2
-Remaining Red Coins - 0
+Remaining Black Coins - 5
+Remaining Red Coins - 1
 Player 1 - 
-	Points -> 1
-	ConsecutiveLose - 1
-	Fouls - 3
-Player 2 - 
-	Points -> 3
-	ConsecutiveLose - 0
-	Fouls - 1
-
-turnNumber - 18
-Current player - Player2
-Strike Type - STRIKE
-Remaining Black Coins - 1
-Remaining Red Coins - 0
-Player 1 - 
-	Points -> 1
+	Points -> -2
 	ConsecutiveLose - 1
 	Fouls - 3
 Player 2 - 
 	Points -> 4
-	ConsecutiveLose - 0
+	ConsecutiveLose - 1
 	Fouls - 1
+
+turnNumber - 10
+Current player - Player2
+Strike Type - STRICKERSTRICK
+Remaining Black Coins - 5
+Remaining Red Coins - 1
+Player 1 - 
+	Points -> -2
+	ConsecutiveLose - 1
+	Fouls - 3
+Player 2 - 
+	Points -> 3
+	ConsecutiveLose - 2
+	Fouls - 2
+
+turnNumber - 11
+Current player - Player1
+Strike Type - REDSTRIKE
+Remaining Black Coins - 5
+Remaining Red Coins - 0
+Player 1 - 
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 3
+	ConsecutiveLose - 2
+	Fouls - 2
+
+turnNumber - 12
+Current player - Player2
+Strike Type - STRIKE
+Remaining Black Coins - 4
+Remaining Red Coins - 0
+Player 1 - 
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 4
+	ConsecutiveLose - 0
+	Fouls - 2
+
+turnNumber - 13
+Comment - Chance wasted as sufficient red coins are not available
+Current player - Player1
+Strike Type - REDSTRIKE
+Remaining Black Coins - 4
+Remaining Red Coins - 0
+Player 1 - 
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 4
+	ConsecutiveLose - 0
+	Fouls - 2
+
+turnNumber - 14
+Comment - Chance wasted as sufficient red coins are not available
+Current player - Player2
+Strike Type - REDSTRIKE
+Remaining Black Coins - 4
+Remaining Red Coins - 0
+Player 1 - 
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 4
+	ConsecutiveLose - 0
+	Fouls - 2
+
+turnNumber - 15
+Comment - Chance wasted as sufficient red coins are not available
+Current player - Player1
+Strike Type - REDSTRIKE
+Remaining Black Coins - 4
+Remaining Red Coins - 0
+Player 1 - 
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 4
+	ConsecutiveLose - 0
+	Fouls - 2
+
+turnNumber - 16
+Comment - Chance wasted as sufficient red coins are not available
+Current player - Player2
+Strike Type - REDSTRIKE
+Remaining Black Coins - 4
+Remaining Red Coins - 0
+Player 1 - 
+	Points -> 0
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 4
+	ConsecutiveLose - 0
+	Fouls - 2
+
+turnNumber - 17
+Current player - Player1
+Strike Type - MULTISTRIKE
+Remaining Black Coins - 7
+Remaining Red Coins - 1
+Player 1 - 
+	Points -> 2
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 4
+	ConsecutiveLose - 0
+	Fouls - 2
+
+turnNumber - 18
+Current player - Player2
+Strike Type - STRIKE
+Remaining Black Coins - 6
+Remaining Red Coins - 1
+Player 1 - 
+	Points -> 2
+	ConsecutiveLose - 0
+	Fouls - 0
+Player 2 - 
+	Points -> 5
+	ConsecutiveLose - 0
+	Fouls - 2

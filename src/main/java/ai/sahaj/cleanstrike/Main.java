@@ -28,16 +28,6 @@ public class Main
 //		testcase.txt is a sample testcase file
 //		List<StrikeType> queryList = inputParser.parseInputTestCase("testcase.txt");
 		
-		try 
-		{
-			if (queryList.size()==0)
-				throw new InputException("File is empty");
-		} catch (Exception e) 
-		{
-			System.out.println("Exception occured: "+e); 
-			return;
-		}
-		
 		Player winner = game.startGame(player1, player2, coins, queryList);
 		
 		System.out.println("##For Detailed Game Stats look into file \"gameStats.txt\"##");

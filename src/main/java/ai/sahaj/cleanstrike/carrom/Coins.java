@@ -49,5 +49,10 @@ public class Coins
 			availableBlackCoins -=  decrementFactor;
 		return;
 	}
+
+	@Override
+	public String toString() {
+		return "Coins [availableRedCoins=" + availableRedCoins + ", availableBlackCoins=" + availableBlackCoins + "]";
+	}
 }
 
