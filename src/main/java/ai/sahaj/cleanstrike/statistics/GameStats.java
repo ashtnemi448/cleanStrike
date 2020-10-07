@@ -50,10 +50,10 @@ public class GameStats
 		fr.write("\nStrike Type - ");
 		fr.write(String.valueOf(strikeType));
 		
-		fr.write("\nRemaining Black Carrom - ");
+		fr.write("\nRemaining Black Coins - ");
 		fr.write(String.valueOf(Carrom.getAvailableBlackCoins()));
 		
-		fr.write("\nRemaining Red Carrom - ");
+		fr.write("\nRemaining Red Coins - ");
 		fr.write(String.valueOf(Carrom.getAvailableRedCoins()));
 
 		fr.write("\nPlayer 1 - ");

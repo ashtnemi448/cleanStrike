@@ -10,7 +10,6 @@ import ai.sahaj.cleanstrike.input.RandomizedInput;
 import ai.sahaj.cleanstrike.carrom.StrikeTypes;
 import ai.sahaj.cleanstrike.carrom.Carrom;
 import ai.sahaj.cleanstrike.player.Player;
-
 public class Main 
 {
 	public static void main(String... args) throws IOException 
@@ -24,14 +23,15 @@ public class Main
 		RandomizedInput randomizedInput = new RandomizedInput();
 		
 //		This generates a testcase file "randomInput.txt" inputParser root directory 
-//		List<StrikeTypes> queryList = randomizedInput.generateRandomInputList(18);
+		List<StrikeTypes> queryList = randomizedInput.generateRandomInputList(18);
 
 //		testcase.txt is a sample testcase file
-		List<StrikeTypes> queryList = inputParser.parseInputTestCase("SampleTestcase.txt");
+//		List<StrikeTypes> queryList = inputParser.parseInputTestCase("SampleTestcase.txt");
 		
 		game.startGame(player1, player2, Carrom, queryList);
 		GameRulesImplementation gameRulesImplementation = new GameRulesImplementation();
 		
+//		Final points of players can be positive or negative
 		Player winner = gameRulesImplementation.ruleToChooseWinner(player1, player2);
 				
 		System.out.println("##For Detailed Game Stats look into file \"gameStats.txt\" in root directory##");

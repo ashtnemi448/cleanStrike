@@ -4,7 +4,7 @@ import ai.sahaj.cleanstrike.player.Player;
 
 public class GameRulesImplementation implements GameRules
 {
-	@Override
+	
 	public Player ruleToChooseWinner(Player player1, Player player2) 
 	{
 		if (player1.getPoints() > player2.getPoints()
@@ -18,7 +18,6 @@ public class GameRulesImplementation implements GameRules
 		return null;
 	}
 
-	@Override
 	public void ruleForConsecutiveLoses(Player player)
 	{
 		if (player.getConsecutiveLoseCount() == 3) 
@@ -29,7 +28,6 @@ public class GameRulesImplementation implements GameRules
 		}
 	}
 
-	@Override
 	public void ruleForFouls(Player player) 
 	{
 		if (player.getFoul() == 3) 

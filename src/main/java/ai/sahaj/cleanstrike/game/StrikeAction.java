@@ -25,7 +25,7 @@ public class StrikeAction
 		{
 			try
 			{
-				throw new NoAvailableBlackCoinsException("Chance wasted as sufficient black Carrom are not available");
+				throw new NoAvailableBlackCoinsException("Chance wasted as sufficient black Coins are not available");
 			} 
 			catch (Exception e) 
 			{
@@ -36,8 +36,8 @@ public class StrikeAction
 	}
 
 	/*
-	 * When player pockets more than 1 coin Assumption - pocketed Carrom are only
-	 * black Carrom
+	 * When player pockets more than 1 coin Assumption - pocketed Coins are only
+	 * black Coins
 	 */
 	public void multiStrike(Player player, Carrom Carrom) 
 	{
@@ -45,7 +45,7 @@ public class StrikeAction
 		{
 			player.incrementPoints(2);
 			/*
-			 * All, but 2 Carrom, that were pocketed, get back on to the Carrom-board
+			 * All, but 2 Coins, that were pocketed, get back on to the Carrom-board
 			 */
 			Carrom.restoreToDefault();
 			Carrom.decrement(2, Colors.BLACK);
@@ -54,7 +54,7 @@ public class StrikeAction
 		{
 			try
 			{
-				throw new NoAvailableBlackCoinsException("Chance wasted as sufficient black Carrom are not available");
+				throw new NoAvailableBlackCoinsException("Chance wasted as sufficient black Coins are not available");
 			} 
 			catch (Exception e) 
 			{
@@ -65,7 +65,7 @@ public class StrikeAction
 	}
 
 	/*
-	 * When player pockets a red coin and 0 or more black Carrom
+	 * When player pockets a red coin and 0 or more black Coins
 	 */
 	public void redStrike(Player player, Carrom Carrom) 
 	{
@@ -73,7 +73,7 @@ public class StrikeAction
 		{
 			player.incrementPoints(3);
 			/*
-			 * If black Carrom are pocketed along with red coin in the same turn, black Carrom
+			 * If black Coins are pocketed along with red coin in the same turn, black Carrom
 			 * get back on to the Carrom-board
 			 */
 			Carrom.decrement(1, Colors.RED);
@@ -82,7 +82,7 @@ public class StrikeAction
 		{
 			try
 			{
-				throw new NoAvailableRedCoinsException("Chance wasted as sufficient red Carrom are not available");
+				throw new NoAvailableRedCoinsException("Chance wasted as sufficient red Coins are not available");
 			} 
 			catch (Exception e) 
 			{
@@ -121,7 +121,7 @@ public class StrikeAction
 		{
 			try
 			{
-				throw new NoCoinsOnBoardException("Chance wasted as sufficient black Carrom are not available");
+				throw new NoCoinsOnBoardException("Chance wasted as sufficient black Coins are not available");
 			} 
 			catch (Exception e) 
 			{
